@@ -11,6 +11,7 @@ html,body{
     background-color: #171d36;
     background: #0d0b18;
     background: linear-gradient(0deg, #0d0b18 0%, #211136 36%, #0e1130 79%, #101532 100%);
+    scroll-behavior: smooth;
 }
 input{
     margin: 20px 10px; 
@@ -23,6 +24,17 @@ input:focus, input:hover{
     outline: none;
 }
 
+a{
+    color:#2ca0a0;
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+}
+
+a:hover{
+    color:#51ecec;
+    text-decoration: none;
+}
+
 /* 2. CSS HELPERS */
 .box{
     width: 400px;
@@ -30,6 +42,7 @@ input:focus, input:hover{
     margin: 80px auto; 
     text-align: center;
     border-radius: 15px;
+    box-shadow: 0 0 10px #0d0b18;
     background: linear-gradient(312deg,#455bbd1f 2%, rgba(255,255,255,0.2) 87%);
     backdrop-filter: blur(10px); 
 }
@@ -39,14 +52,13 @@ input:focus, input:hover{
     margin: 20px 20px 40px 20px;
     text-shadow: 2px 0 7px #2c2c2cd7;
 }
-.usern, .pass{
+.placeholders{
     width: 80%;
     height: 50px;
     padding-left: 15px;
     border:2px solid #fdfdfd;
 }
-.usern:hover, .pass:hover, 
-.usern:focus, .pass:focus{
+.placeholders:focus{
     border:2px solid #51ecec;
     box-shadow: 0 0 4px #51ecec;
     transition: 0.3s ease-in;
@@ -61,7 +73,7 @@ input:focus, input:hover{
 .btn-submit:hover{
     background-color: #51ecec;
     box-shadow: 0 0 7px  #2c2c2cd7;
-    transition: 0.2s ease-in;
+    transition: 0.2s ease-in-out;
 }
 .forgot, .forgot:hover{
     color:#fdfdfd;
