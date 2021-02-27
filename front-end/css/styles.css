@@ -45,6 +45,8 @@ a:hover{
     box-shadow: 0 0 10px #0d0b18;
     background: linear-gradient(312deg,#455bbd1f 2%, rgba(255,255,255,0.2) 87%);
     backdrop-filter: blur(10px); 
+    border-left: 2px solid #fdfdfd3a;
+    border-bottom: 2px solid #43558f1a;
 }
 
 /* 3. LOGIN */
@@ -70,7 +72,7 @@ a:hover{
     height: 50px;
     background-color: #2ca0a0;
 }
-.btn-submit:hover{
+.btn-submit:hover, .btn-submit:focus{
     background-color: #51ecec;
     box-shadow: 0 0 7px  #2c2c2cd7;
     transition: 0.2s ease-in-out;
