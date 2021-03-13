@@ -11,7 +11,7 @@
     <!-- CSS stylesheets -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css" type="text/css">
-</head>
+    <script src="https://kit.fontawesome.com/1a09b3c6d9.js" crossorigin="anonymous"></script></head>
 
 <body>
     <!-- Page Preloder -->
@@ -21,31 +21,104 @@
 
     <div class="container-fluid full-height">
         <div class="row grid-container">
-                <!-- <div class="col-8">
-                    <div class="row">
-                        <div class="col-12 dash-box"></div>
-                    </div>
-                    <div class="row">
-                        <div class="col-4 dash-box"></div>
-                        <div class="col-4 dash-box"></div>
-                        <div class="col-4 dash-box"></div>
-                    </div>
-                    <div class="row">
-                        <div class="col-6 dash-box"></div>
-                        <div class="col-6 dash-box"></div>
+                <div class="item-aa dash-box">
+                    <div>
+                        <h1>Date</h1>
                     </div>
                 </div>
-                <div class="col-4 dash-box">
-
-                </div> -->
-
-                <div class="item-a dash-box"></div>
-                <div class="item-b dash-box"></div>
-                <div class="item-c dash-box"></div>
-                <div class="item-d dash-box"></div>
-                <div class="item-e dash-box"></div>
+                <div class="item-a dash-box">
+                    <div class="balance-today">
+                        <div>
+                            <h4>Balance</h4>
+                            <div class="cash-font-lg">$250</div>
+                        </div>
+                        <div>
+                            <h4>Income</h4>
+                            <div class="cash-font-lg">$300</div>
+                        </div>
+                        <div>
+                            <h4>Expenses</h4>
+                            <div class="cash-font-lg">$50</div>
+                        </div>   
+                    </div>
+                </div>
+                <div class="item-b dash-box">
+                    <div>
+                        <h4>Bank Account</h4>
+                        <div class="cash-font-lg">$1194.09</div>
+                    </div>
+                </div>
+                <div class="item-c dash-box">
+                    <div>
+                        <h4>Credit Card</h4>
+                        <div class="cash-font-lg">$364.54</div>
+                    </div>
+                </div>
+                <div class="item-d dash-box">
+                    <div>
+                        <h4>Cash</h4>
+                        <div class="cash-font-lg">$541.00</div>
+                    </div>
+                </div>
+                <div class="item-e dash-box">
+                    <h4>History</h4>
+                </div>
                 <div class="item-f dash-box"></div>
-                <div class="item-g dash-box"></div>
+                <div class="item-g dash-box">
+                    <div class="btn-row">
+                        <button class="dark-btn">Monthly</button>
+                        <button class="dark-btn">Daily</button>
+                    </div>
+                    <h3>Today's Expenses</h3>
+                    <div>
+                        <a href="#" class="align-left add-category">
+                            <i class="fas fa-plus"></i>   
+                            Add category
+                        </a>
+                        <ul>
+                            <li>
+                                <div class="icon-wrapper"><i class="fas fa-utensils"></i></div>
+                                <div>Food</div>
+                                <div class="align-right cash-font-md outflow-font">$25</div>
+                            </li>
+                            <li>
+                                <div class="icon-wrapper" style="background-color: #2ca058;"><i class="fas fa-car-alt"></i></div>
+                                <div>Transport</div>
+                                <div class="align-right cash-font-md outflow-font">$25</div>
+                            </li>
+                            <li>
+                                <div class="icon-wrapper" style="background-color: #673ab7;"><i class="fas fa-tshirt"></i></div>
+                                <div>Clothes</div>
+                                <div class="align-right cash-font-md outflow-font">$25</div>
+                            </li>
+                            <li>
+                                <div class="icon-wrapper" style="background-color: #e67a32;"><i class="fas fa-house-user"></i></div>
+                                <div>Rent</div>
+                                <div class="align-right cash-font-md outflow-font">$25</div>
+                            </li>
+                            <li>
+                                <div class="icon-wrapper" style="background-color: #2ca058;"><i class="fas fa-glass-cheers"></i></div>
+                                <div>Entertainment</div>
+                                <div class="align-right cash-font-md outflow-font">$25</div>
+                            </li>
+                            <li>
+                                <div class="icon-wrapper" style="background-color: #e7b428;"><i class="fas fa-coins"></i></div>
+                                <div>Taxes</div>
+                                <div class="align-right cash-font-md outflow-font">$25</div>
+                            </li>
+                            <li>
+                                <div class="icon-wrapper" style="background-color: #2ca0a0;"><i class="fas fa-wallet"></i></div>
+                                <div>Salary</div>
+                                <div class="align-right cash-font-md inflow-font">$2500</div>
+                            </li>
+                            <li>
+                                <div class="icon-wrapper" style="background-color: #c95757;"><i class="fas fa-briefcase"></i></div>
+                                <div>Business</div>
+                                <div class="align-right cash-font-md inflow-font">$34</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
         </div>
     </div>
 
@@ -55,6 +128,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="js/main.js"></script>
+    
 </body>
 
 </html>
