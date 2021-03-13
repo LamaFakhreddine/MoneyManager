@@ -170,6 +170,9 @@ li{
 }
 
 /* 2. CSS HELPERS */
+.title{
+    padding:10px 15px;
+}
 .box{
     width: 400px;
     padding: 30px;
@@ -299,17 +302,18 @@ li{
     margin: 20px;
 }
 .dark-btn{
-    width:90px;
+    width:80px;
     padding:6px 12px;
     background-color: #673ab7;
     text-align: center;
+    font-size: 0.95rem;
     border: none;
     border-radius:10px;
     letter-spacing: 1px;
 }
 .dark-btn:hover, .dark-btn:active{
     background-color: #a06aff;
-    box-shadow: 0 0 5px #a06aff;
+    box-shadow: 0 0 3px #a06aff;
     outline: none;
     transition: 0.4s ease-in-out;
 }
