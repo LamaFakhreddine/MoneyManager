@@ -228,6 +228,10 @@ li{
 .align-left{
     margin-right:auto;
 }
+.align-center{
+    justify-content: center;
+}
+
 
 /* SCROLLBAR */
 ::-webkit-scrollbar {
@@ -325,8 +329,8 @@ button:focus{
     color:#fdfdfd;
     transition: 0.4s ease-in-out;
 }
-/* 5. DASHBOARD */
 
+/* 5. DASHBOARD */
 .grid-container{
     height:inherit;
     display: grid;
@@ -336,6 +340,7 @@ button:focus{
     padding: 20px;
 }
 .item-aa{
+    background-color: #1e7272 !important;
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 1;
@@ -394,6 +399,26 @@ button:focus{
 
 }
 
+/* 5.0 DATE */
+.date-month{
+    font-size: 1.4rem;
+    margin:-15px;
+    padding: 5px 10px;
+    background-color: #12142077;
+    border-bottom: 6px solid #090b1b;
+}
+.date-day{
+
+    font-size:3rem;
+    font-weight: bold;
+    margin-top:20px;
+    margin-bottom:-10px;
+}
+.next-arrow, .prev-arrow{
+    margin-top:35px;
+    padding: 10px;
+}
+
 /* 5.1 TODAY'S BALANCE */
 .balance-today{
     display: flex;
@@ -402,7 +427,7 @@ button:focus{
     gap:40px; 
 }
 
-/* ITEM G */
+/* CASHFLOW DETAILS */
 .add-category{
     font-size: 0.95rem;
     margin:15px 0;

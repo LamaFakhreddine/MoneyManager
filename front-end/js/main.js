@@ -9,7 +9,8 @@
         element.classList.toggle("loaded");
         loaded = true; 
         console.log(loaded);
-        return loaded;
+        console.log("Animating numbers");
+        setTimeout(numAnimation, 600);
     });
 
     /*--------------------------------
@@ -23,7 +24,7 @@
     /*--------------------------------
         Number Animation 
     ----------------------------------*/
-    window.onload = function() {
+    function numAnimation() {
         const counters = document.querySelectorAll('.cash-font-lg, .cash-font-md');
         const speed = 400; 
         counters.forEach(counter => {
@@ -42,6 +43,12 @@
         });
     };
 
-    setTimeout(window.onload, 2000);
-
+    function createDate(){
+        var date = new Date();
+        var day = date.toLocaleDateString("default", { day: "numeric" })   
+        var month = date.toLocaleDateString("default",{month:"long"});
+        $(".date-month").text(month);
+        $(".date-day").text(day);
+    }createDate();
+    
 })(jQuery);
