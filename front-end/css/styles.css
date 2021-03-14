@@ -169,6 +169,7 @@ li{
     visibility: hidden;
 }
 
+
 /* 2. CSS HELPERS */
 .title{
     padding:10px 15px;
@@ -273,6 +274,7 @@ li{
 }
 
 .icon-wrapper{
+    text-align: center;
     background-color: #2ca0a0;
     width: 30px;
     border-radius: 50%;
@@ -282,6 +284,9 @@ li{
 
 
 /* 4. BUTTONS */
+button:focus{
+    outline: 0;
+}
 .btn-submit{
     font-weight: bolder;
     letter-spacing: 1px;
@@ -305,16 +310,19 @@ li{
     width:80px;
     padding:6px 12px;
     background-color: #673ab7;
+    color:#fdfdfd;
     text-align: center;
     font-size: 0.95rem;
     border: none;
     border-radius:10px;
     letter-spacing: 1px;
+    outline: transparent;
 }
-.dark-btn:hover, .dark-btn:active{
+.dark-btn:hover, .dark-btn:active
+.dark-btn:focus, .active-btn{
     background-color: #a06aff;
     box-shadow: 0 0 3px #a06aff;
-    outline: none;
+    color:#fdfdfd;
     transition: 0.4s ease-in-out;
 }
 /* 5. DASHBOARD */
@@ -383,6 +391,7 @@ li{
     background: linear-gradient(312deg,#9dafff15 2%, #9dafff15 87%);
     backdrop-filter: blur(10px); 
     overflow-y:auto;
+
 }
 
 /* 5.1 TODAY'S BALANCE */
@@ -393,7 +402,7 @@ li{
     gap:40px; 
 }
 
-/* ITEM H */
+/* ITEM G */
 .add-category{
     font-size: 0.95rem;
     margin:15px 0;
