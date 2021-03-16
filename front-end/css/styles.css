@@ -204,6 +204,26 @@ li{
     font-weight:bold;
     font-size: 1.25rem;
 }
+.gradient-font{
+    font-weight:bold;
+    font-size: 1.8rem;
+    background-color: #2ca058;
+    background-image: linear-gradient(45deg, #51ecec, #2ca058);
+    background-size: 100%;
+	background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+}
+.header{
+    padding-bottom: 7px;
+    border-bottom: 2px solid #313553;
+}
+.bb{
+    border-top:2px solid #3135539a;
+    border-bottom:2px solid #3135539a;
+}
 .inflow-font{
     color:#2ca058;
 }
@@ -334,60 +354,69 @@ button:focus{
 .grid-container{
     height:inherit;
     display: grid;
-    grid-auto-rows: 10% ;
-    grid-template-columns: 11% 11% 11% 11% 11% 11% auto;
+    grid-auto-rows: 8% ;
+    grid-auto-columns: 8%;
     gap: 15px;
     padding: 20px;
 }
-.item-aa{
+.item-a{
+    background-color: #2ca058;
+    background-image: linear-gradient(45deg, #2ca0a0, #2ca058);
     background-color: #1e7272 !important;
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 1;
     grid-row-end: 3;
 }
-.item-a{
+.item-b{
     grid-column-start: 2;
-    grid-column-end: 7;
+    grid-column-end:7;
     grid-row-start: 1;
     grid-row-end: 3;
 }
-.item-b{
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 3;
-    grid-row-end: 5;
-}
 .item-c{
-    grid-column-start: 3;
-    grid-column-end: 5;
-    grid-row-start: 3;
-    grid-row-end: 5;
+    grid-column-start: 7;
+    grid-column-end: 9;
+    grid-row-start: 1;
+    grid-row-end: 3;
 }
 .item-d{
-    grid-column-start: 5;
-    grid-column-end: 7;
+    grid-column-start: 7;
+    grid-column-end: 9;
     grid-row-start: 3;
     grid-row-end: 5;
 }
 .item-e{
-    grid-column-start: 1;
-    grid-column-end: 4;
+    grid-column-start: 7;
+    grid-column-end: 9;
     grid-row-start: 5;
-    grid-row-end: 9;
+    grid-row-end: 7;
 }
 .item-f{
-    grid-column-start: 4;
-    grid-column-end: 7;
-    grid-row-start: 5;
-    grid-row-end: 9;
+    grid-column-start: 1;
+    grid-column-end:4;
+    grid-row-start: 3;
+    grid-row-end: 7;
 }
 .item-g{
-    grid-column-start: 7;
-    grid-column-end: 8;
-    grid-row-start: 1;
-    grid-row-end: 9;
+    grid-column-start: 4;
+    grid-column-end: 7;
+    grid-row-start: 3;
+    grid-row-end: 7;
 }
+.item-h{
+    grid-column-start: 1;
+    grid-column-end: 9;
+    grid-row-start: 7;
+    grid-row-end: 11;
+}
+.item-i{
+    grid-column-start: 9;
+    grid-column-end: 12;
+    grid-row-start: 1;
+    grid-row-end: 11;
+}
+
 .dash-box{
     width:100%;
     padding: 15px;
@@ -401,21 +430,20 @@ button:focus{
 
 /* 5.0 DATE */
 .date-month{
-    font-size: 1.4rem;
+    font-size: 1.15rem;
     margin:-15px;
     padding: 5px 10px;
     background-color: #12142077;
     border-bottom: 6px solid #090b1b;
 }
 .date-day{
-
-    font-size:3rem;
+    font-size:2rem;
     font-weight: bold;
     margin-top:20px;
     margin-bottom:-10px;
 }
 .next-arrow, .prev-arrow{
-    margin-top:35px;
+    margin-top:25px;
     padding: 10px;
 }
 
@@ -424,8 +452,11 @@ button:focus{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap:40px; 
+    gap:60px; 
 }
+
+/* 5.2 BANK / CREDIT CARD / CASH */
+
 
 /* CASHFLOW DETAILS */
 .add-category{
