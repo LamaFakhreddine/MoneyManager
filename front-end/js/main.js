@@ -25,7 +25,7 @@
         Number Animation 
     ----------------------------------*/
     function numAnimation() {
-        const counters = document.querySelectorAll('.cash-font-lg, .cash-font-md');
+        const counters = document.querySelectorAll('.cash-font-lg, .cash-font-md, .cash-font-sm');
         const speed = 400; 
         counters.forEach(counter => {
             const updateCount = () =>{

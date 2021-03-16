@@ -204,6 +204,10 @@ li{
     font-weight:bold;
     font-size: 1.25rem;
 }
+.cash-font-sm{
+    font-weight: bold;
+    font-size: 1rem;
+}
 .gradient-font{
     font-weight:bold;
     font-size: 1.8rem;
@@ -227,16 +231,22 @@ li{
 .inflow-font{
     color:#2ca058;
 }
-.inflow-font:after{
+.outflow-font{
+    color:#c95757
+}
+.decrease-font{
+    color:#2ca058;
+}
+.increase-font{
+    color:#c95757;
+}
+.inflow-font:after, .increase-font:after{
     font-family: FontAwesome;
     content:"\f35b";
     display: inline-block;
     padding-left:5px;
 }
-.outflow-font{
-    color:#c95757
-}
-.outflow-font:after{
+.outflow-font:after, .decrease-font:after{
     font-family: FontAwesome;
     content:"\f358";
     display: inline-block;
@@ -457,6 +467,13 @@ button:focus{
 
 /* 5.2 BANK / CREDIT CARD / CASH */
 
+/* 5.3 SAVINGS */
+.new-li{
+    background-color: transparent;
+}
+.item-f > h5{
+    margin-bottom: 30px;
+}
 
 /* CASHFLOW DETAILS */
 .add-category{
