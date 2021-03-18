@@ -470,6 +470,7 @@ button:focus{
 /* 5.3 SAVINGS */
 .new-li{
     background-color: transparent;
+    padding: 5px;
 }
 .item-f > h5{
     margin-bottom: 30px;

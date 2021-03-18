@@ -36,7 +36,11 @@
                     counter.innerHTML = count + increment;
                     setTimeout(updateCount, 1); 
                 }else{
-                    counter.innerHTML = "$"+target; 
+                    if(counter.classList.contains("decrease-font") || counter.classList.contains("increase-font")){
+                        counter.innerHTML = target+"% ";
+                    }else{
+                        counter.innerHTML = "$ "+target;
+                    } 
                 }
             }
             updateCount();
