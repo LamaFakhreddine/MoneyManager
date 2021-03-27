@@ -11,6 +11,7 @@
         console.log(loaded);
         console.log("Animating numbers");
         setTimeout(numAnimation, 600);
+        setTimeout(loadChart, 500);
     });
 
     /*--------------------------------
@@ -54,5 +55,53 @@
         $(".date-month").text(month);
         $(".date-day").text(day);
     }createDate();
+
+
+    
+    function loadChart() {
+        var labelElement = document.getElementById("monthly").getElementsByClassName("outflow-font");
+        var expenses = jQuery.map(labelElement, function(element){ 
+            return element.getAttribute("data-target");
+        });
+        var chartLabel = jQuery.map(labelElement, function(element){
+            return $(element).prev().text();
+        });
+
+        Chart.defaults.global.legend.labels.usePointStyle = true;
+
+        var donutChart = new Chart(document.getElementById("doughnut-chart"), {
+            type: 'doughnut',
+            data: {
+                labels : chartLabel,
+                datasets : [{
+                    label : "Expenses (USD)",
+                    data : expenses,
+                    backgroundColor : ["#d0e7e7","#51ecec","#2ca058", "#673ab7","#e67a32","#2ca0a0","#eb80bb","#8890ff"],
+                    borderColor: "transparent",
+                    innerRadius : 90,
+                }]
+            },
+            options : {
+                cutoutPercentage : 75,
+                animation : {
+                    animateRotate : true
+                },
+                chart : {
+                    width: '100%'
+                },
+                legend : {
+                    position : "bottom",
+                    labels: {
+                        fontColor : '#fdfdfd',
+                        boxWidth: 8,
+                    }
+                }
+            }
+        }); 
+        
+       
+
+    }
+
     
 })(jQuery);
