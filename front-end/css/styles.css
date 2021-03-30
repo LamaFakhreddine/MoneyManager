@@ -3,14 +3,14 @@
     box-sizing: border-box;
     margin: 0; 
     padding: 0; 
-    color: #fdfdfd;
+    color: #fdfdfdce;
 }
 html, body{
     font-family: Helvetica Neue, Arial, sans-serif;
     width: 100%;
     height: 100%;
     background: #0d0b18;
-    background: linear-gradient(0deg, #08070e 0%, #12091f 36%, #090b1b 79%, #0b0d18 100%);
+    background: linear-gradient(0deg, #09080a 0%, #151e25 36%, #0b0d18 79%, #0c0c11 100%);
     scroll-behavior: smooth;
 }
 input{
@@ -46,7 +46,10 @@ li{
     align-items: center;
     gap:10px;
 }
-
+h5{
+    font-size: 1.1rem;
+    font-weight: light;
+}
 
 /* Preloder */
 
@@ -57,7 +60,7 @@ li{
 	top: 0;
 	left: 0;
 	z-index: 999999;
-	background: #0d0b18;
+	background: #0a090f;
 }
 
 .loader {
@@ -79,7 +82,7 @@ li{
     left: 5px; 
     right: 5px;
     bottom: 5px; 
-    border: 3px solid #2ca0a0;
+    border: 3px solid #2ca079;
     border-radius: 50%;
     animation: loader 1.5s linear infinite;
 	-webkit-animation: loader 1.5s linear infinite;
@@ -110,7 +113,7 @@ li{
 		-ms-transform: rotate(180deg);
 		transform: rotate(180deg);
         border: 4px solid transparent;
-		border-left-color: #673ab7;
+		border-left-color: #09b665;
 	}
 	75% {
 		-webkit-transform: rotate(270deg);
@@ -140,7 +143,7 @@ li{
 		-ms-transform: rotate(180deg);
 		transform: rotate(180deg);
         border: 4px solid transparent;
-		border-left-color: #673ab7;
+		border-left-color: #09b665;
 	}
 	75% {
 		-webkit-transform: rotate(270deg);
@@ -202,17 +205,16 @@ li{
 }
 .cash-font-md{
     font-weight:bold;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
 }
 .cash-font-sm{
     font-weight: bold;
     font-size: 1rem;
 }
+
 .gradient-font{
-    font-weight:bold;
-    font-size: 1.8rem;
     background-color: #2ca058;
-    background-image: linear-gradient(45deg, #9afafa, #78eea5);
+    background-image: linear-gradient(45deg, #9afafa, #78eee4);
     background-size: 100%;
 	background-clip: text;
     -webkit-background-clip: text;
@@ -270,7 +272,7 @@ li{
 ::-webkit-scrollbar-track {
     background: rgba(58, 58, 58, 0.09);
     border-top-right-radius: inherit;
-    border-bottom-right-radius: inherit
+    border-bottom-right-radius: inherit;
 }
 ::-webkit-scrollbar-thumb {
     background: #88888833;
@@ -343,7 +345,7 @@ button:focus{
 .dark-btn{
     width:80px;
     padding:6px 12px;
-    background-color: #673ab7;
+    background-color: #2ca0a0;
     color:#fdfdfd;
     text-align: center;
     font-size: 0.95rem;
@@ -354,8 +356,8 @@ button:focus{
 }
 .dark-btn:hover, .dark-btn:active
 .dark-btn:focus, .active-btn{
-    background-color: #a06aff;
-    box-shadow: 0 0 3px #a06aff;
+    background-color: #51ecec;
+    box-shadow: 0 0 3px #51ecec;
     color:#fdfdfd;
     transition: 0.4s ease-in-out;
 }
@@ -365,64 +367,74 @@ button:focus{
     height:inherit;
     display: grid;
     grid-auto-rows: 8% ;
-    grid-auto-columns: 8%;
+    grid-template-columns: 1% repeat(auto-fill,8%);
     gap: 15px;
     padding: 20px;
 }
-.item-a{
-    background-color: #2ca058;
-    background-image: linear-gradient(45deg, #2ca0a0, #2ca058);
-    background-color: #1e7272 !important;
+.navbar-grid{
+    margin-top:-20px;
+    margin-bottom:-10px;
+    margin-left: -20px;
     grid-column-start: 1;
     grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 11;
+    background: linear-gradient(312deg,#9dafff15 2%, #9dafff15 87%);
+}
+.item-a{
+    background-image: linear-gradient(45deg, #2ca0a0, #2ca058);
+    background-color: #1e7272 !important;
+    grid-column-start: 2;
+    grid-column-end: 4;
     grid-row-start: 1;
     grid-row-end: 3;
 }
 .item-b{
     grid-column-start: 2;
-    grid-column-end:7;
-    grid-row-start: 1;
-    grid-row-end: 3;
-}
-.item-c{
-    grid-column-start: 7;
-    grid-column-end: 9;
-    grid-row-start: 1;
-    grid-row-end: 3;
-}
-.item-d{
-    grid-column-start: 7;
-    grid-column-end: 9;
-    grid-row-start: 3;
-    grid-row-end: 5;
-}
-.item-e{
-    grid-column-start: 7;
-    grid-column-end: 9;
-    grid-row-start: 5;
-    grid-row-end: 7;
-}
-.item-f{
-    grid-column-start: 1;
     grid-column-end:4;
     grid-row-start: 3;
     grid-row-end: 7;
 }
-.item-g{
+.item-c{
     grid-column-start: 4;
-    grid-column-end: 7;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+.item-d{
+    grid-column-start: 6;
+    grid-column-end: 8;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+.item-e{
+    grid-column-start: 8;
+    grid-column-end: 10;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+.item-f{
+    grid-column-start: 4;
+    grid-column-end:7;
+    grid-row-start: 3;
+    grid-row-end: 7;
+}
+.item-g{
+    grid-column-start: 7;
+    grid-column-end: 10;
     grid-row-start: 3;
     grid-row-end: 7;
 }
 .item-h{
-    grid-column-start: 1;
-    grid-column-end: 9;
+    grid-column-start: 2;
+    grid-column-end: 10;
     grid-row-start: 7;
     grid-row-end: 11;
 }
+
 .item-i{
-    grid-column-start: 9;
-    grid-column-end: 12;
+    grid-column-start: 10;
+    grid-column-end: 13;
     grid-row-start: 1;
     grid-row-end: 11;
 }
@@ -437,6 +449,23 @@ button:focus{
     overflow-y:auto;
 
 }
+/* SIDEBAR */
+.wrapper{
+    display: flex;
+    align-items: stretch;
+}
+#sidebar{
+    margin-top:-20px;
+    margin-left:-20px;
+    padding:20px;
+    background-color:#09080a;
+    width:350px;
+    min-height: 100vh;
+}
+/* #sidebar.active{
+    margin-left:-250px;
+} */
+
 
 /* 5.0 DATE */
 .date-month{
@@ -459,10 +488,13 @@ button:focus{
 
 /* 5.1 TODAY'S BALANCE */
 .balance-today{
-    display: flex;
+    /* padding: 0 10px; */
+    text-align: left;
+}
+.balance-today > div {
+    /* border:2px solid red; */
     align-items: center;
-    justify-content: center;
-    gap:60px; 
+    margin: 20px 0;
 }
 
 /* 5.2 BANK / CREDIT CARD / CASH */
@@ -476,10 +508,15 @@ button:focus{
     margin-bottom: 30px;
 }
 
-/* 5.4 MONTHLY EXPENSES */
+/* 5.4 CHARTS */
 
 #doughnut-chart{
-    margin: 20px 0;
+    margin-top: 20px;
+}
+#bar-chart{
+    margin-top: 20px;
+    height:100%;
+    padding: 0 20px;
 }
 
 /* CASHFLOW DETAILS */
