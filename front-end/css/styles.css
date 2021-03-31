@@ -36,9 +36,9 @@ a:hover{
 }
 
 li{
-    background-color: #31355377;
-    border-top: 2px solid #313553;
-    border-bottom: 2px solid #313553;
+    background-color: #31415377;
+    border-top: 2px solid #344d5877;
+    border-bottom: 2px solid #344d5877;
     margin: 15px 10px; 
     padding: 10px 20px;
     border-radius: 10px;
@@ -228,7 +228,7 @@ h5{
 }
 .header{
     padding-bottom: 7px;
-    border-bottom: 2px solid #313553;
+    border-bottom: 2px solid #344d5877;
 }
 .bb{
     border-top:2px solid #3135539a;
