@@ -46,6 +46,10 @@ li{
     align-items: center;
     gap:10px;
 }
+h1{
+    text-align: center;
+    font-size: 1.5rem;
+}
 h5{
     font-size: 1.1rem;
     font-weight: light;
@@ -450,23 +454,93 @@ button:focus{
 
 }
 /* SIDEBAR */
-.wrapper{
+/* logo */
+.logo{
+    background-color: #1e72723d;
     display: flex;
-    align-items: stretch;
+    align-items: center;
+    justify-content: center;
+    height:125px;
 }
-#sidebar{
-    margin-top:-20px;
-    margin-left:-20px;
-    padding:20px;
-    background-color:#09080a;
-    width:350px;
+/* The sidebar menu */
+.sidebar {
     min-height: 100vh;
-}
-/* #sidebar.active{
+    width: 250px;
     margin-left:-250px;
-} */
+    position: fixed; /* Stay in place */
+    z-index: 10; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: #202936;
+    overflow-x: hidden; 
+    transition: 0.5s; 
+    box-shadow: 0 0 10px #09080a;
+  }
+  .overlay .sidebar:before{
+      /* content: "";
+      min-width:100%;
+      min-height:100%;
+      position:fixed;
+      top:0;
+      left:0;
+      background-color: #cf3434a6;
+      z-index: -1000; */
+  }
+  .sidebar ul{
+    padding: 40px 20px;
+  }
+  /* The sidebar links */
+  .sidebar li{
+    background-color: transparent;
+    border:none;
+  }
+  .sidebar a {
+    text-decoration: none;
+    color: #fdfdfd;
+    transition: 0.3s;
+  }
+  .sidebar span{
+      padding-left: 25px;
+  }
+  .sidebar a:hover,
+  .sidebar .active{
+    transition: 0.3s;
+    color:#43d3a8;
+  }
+  .sign-out-btn{
+      margin-top:40px;
+      justify-content: center;
+  }
+  .sign-out-btn a{
+      padding-left: 0;
+      font-weight: bold;
+  }
 
+  /* The button used to open the sidebar */
+  .openbtn {
+    clip-path: polygon(0 0, 39% 16%, 39% 84%, 0% 100%);    
+    position: fixed;
+    top:45%;
+    left:0;
+    background-color: #202936;
+    padding: 10px 15px;
+    border: none;
+    height:100px;
+    width:80px;
+    box-shadow: 0 0 10px #09080a;
+    z-index: 4;
+    transition:0.5s;
+  }
+  .openbtn i{
+    margin-left: -45px;
+    transform: scaleY(3.5);
+}
 
+  .openbtn:hover {
+    background-color: #1e7272;
+    transition: 0.5s;
+  }
+  
 /* 5.0 DATE */
 .date-month{
     font-size: 1.15rem;
@@ -488,7 +562,9 @@ button:focus{
 
 /* 5.1 TODAY'S BALANCE */
 .balance-today{
-    /* padding: 0 10px; */
+    /* padding: 0 
+    10px; */
+    /* display: flex; */
     text-align: left;
 }
 .balance-today > div {

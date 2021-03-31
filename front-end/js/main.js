@@ -207,17 +207,24 @@
      /*--------------------------------
         Sidebar Animation 
     ----------------------------------*/
-    /* Set the width of the sidebar to 250px and the left margin of the page content to 250px */
-    $(document).ready(function () {
+    window.onload = function(){
+        console.log("btn ready");
+        document.getElementById("sidebar-btn").onclick =  function openCloseSidebar(){
+            var sidebar = document.getElementById("mySidebar");
+            var sidebarBtn = document.getElementById("sidebar-btn");
+  
+            if(sidebar.classList.contains("overlay")){
+                sidebar.style.marginLeft = "-250px";
+                sidebarBtn.style.marginLeft= "0px";
+                console.log("closed");
+            }else{
+                sidebar.style.marginLeft = "0";
+                sidebarBtn.style.marginLeft= "250px";
+                console.log("opened");
+            }
+            sidebar.classList.toggle("overlay");
+            console.log("toggled overlay")
+        }
+    }
 
-        $("#sidebar").mCustomScrollbar({
-             theme: "minimal"
-        });
-    
-        $('#sidebarCollapse').on('click', function () {
-            $('#sidebar').toggleClass('active');
-        });
-    
-    });
-    
 })(jQuery);
