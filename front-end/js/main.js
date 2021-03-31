@@ -210,10 +210,11 @@
     window.onload = function(){
         console.log("btn ready");
         document.getElementById("sidebar-btn").onclick =  function openCloseSidebar(){
+            var sidebarDiv = document.getElementById("sidebarDiv");
             var sidebar = document.getElementById("mySidebar");
             var sidebarBtn = document.getElementById("sidebar-btn");
   
-            if(sidebar.classList.contains("overlay")){
+            if(sidebarDiv.classList.contains("overlay")){
                 sidebar.style.marginLeft = "-250px";
                 sidebarBtn.style.marginLeft= "0px";
                 console.log("closed");
@@ -222,7 +223,7 @@
                 sidebarBtn.style.marginLeft= "250px";
                 console.log("opened");
             }
-            sidebar.classList.toggle("overlay");
+            sidebarDiv.classList.toggle("overlay");
             console.log("toggled overlay")
         }
     }

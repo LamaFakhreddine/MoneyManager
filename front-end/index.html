@@ -21,6 +21,14 @@
 
     <div class="container-fluid full-height">
         <div class="row grid-container">
+            <div class="item-profile dash-box">
+                <a href="#">
+                    <i class="fas fa-user-circle"></i>  
+                </a>   
+                <div class="username">
+                    John Doe
+                </div>
+            </div>
                 <div class="item-a dash-box">
                     <div>
                         <div class="date-month"></div>
@@ -214,12 +222,17 @@
                 </div>
             </div>
                            <!-- Sidebar -->
-            <div class="navbar-grid">
+            <div id="sidebarDiv">
                 <div class="sidebar" id="mySidebar">
+                    <div class="openbtn-wrap">
+                        <button id="sidebar-btn" class="openbtn" onclick="window.onload">
+                            <i class="fas fa-chevron-right fa-lg"></i>
+                        </button>
+                    </div>
                     <div class="logo">
                         <h1>Money Manager</h1>
                     </div>
-                    <ul>
+                    <ul class="sidebar-links">
                         <li>                                        
                             <a href="#" class="active">
                                 <i class="fas fa-home"></i>
@@ -257,14 +270,9 @@
                             </a>          
                         </li>
                         <li class="sign-out-btn">                                
-                            <a href="#">SIGN OUT</a>
+                            <a href="#"><span>SIGN OUT</span></a>
                         </li>
                     </ul>
-                    <div>
-                        <button id="sidebar-btn" class="openbtn" onclick="window.onload">
-                            <i class="fas fa-chevron-right fa-lg"></i>
-                        </button>
-                    </div>
                 </div>
             </div>
         </div>

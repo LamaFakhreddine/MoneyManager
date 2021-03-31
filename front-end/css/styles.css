@@ -63,7 +63,7 @@ h5{
 	height: 100%;
 	top: 0;
 	left: 0;
-	z-index: 999999;
+	z-index: 10;
 	background: #0a090f;
 }
 
@@ -349,7 +349,7 @@ button:focus{
 .dark-btn{
     width:80px;
     padding:6px 12px;
-    background-color: #2ca0a0;
+    background-color: #2e9274;
     color:#fdfdfd;
     text-align: center;
     font-size: 0.95rem;
@@ -360,8 +360,8 @@ button:focus{
 }
 .dark-btn:hover, .dark-btn:active
 .dark-btn:focus, .active-btn{
-    background-color: #51ecec;
-    box-shadow: 0 0 3px #51ecec;
+    background-color: #43d3a8;
+    box-shadow: 0 0 3px #43d3a8;
     color:#fdfdfd;
     transition: 0.4s ease-in-out;
 }
@@ -375,20 +375,19 @@ button:focus{
     gap: 15px;
     padding: 20px;
 }
-.navbar-grid{
-    margin-top:-20px;
-    margin-bottom:-10px;
-    margin-left: -20px;
-    grid-column-start: 1;
-    grid-column-end: 2;
+.item-profile{
+    background-color: #38b6905d !important;
+
+    grid-column-start: 2;
+    grid-column-end: 3;
     grid-row-start: 1;
-    grid-row-end: 11;
+    grid-row-end: 3;
     background: linear-gradient(312deg,#9dafff15 2%, #9dafff15 87%);
 }
 .item-a{
     background-image: linear-gradient(45deg, #2ca0a0, #2ca058);
-    background-color: #1e7272 !important;
-    grid-column-start: 2;
+    background-color: #2e9274 !important;
+    grid-column-start: 3;
     grid-column-end: 4;
     grid-row-start: 1;
     grid-row-end: 3;
@@ -454,7 +453,38 @@ button:focus{
 
 }
 /* SIDEBAR */
-/* logo */
+
+/* The sidebar menu */
+.sidebar {
+    min-height: 100vh;
+    width: 250px;
+    margin-left:-250px;
+    position: fixed; /* Stay in place */
+    top: 0;
+    left: 0;
+    background-color: #202936;
+    transition: 0.5s; 
+    box-shadow: 0 0 10px #09080a;
+    z-index: 9;
+  }
+  .overlay{
+      position:fixed;
+      transition:0.5s;
+
+  }
+  .overlay:before{
+      content: "";
+      min-width:100%;
+      min-height:100%;
+      position:fixed;
+      top:0;
+      left:0;
+      background-color: #070914c4;
+      opacity: 1;
+      transition:0.5s;
+      z-index: 1;
+  }
+  /* logo */
 .logo{
     background-color: #1e72723d;
     display: flex;
@@ -462,61 +492,43 @@ button:focus{
     justify-content: center;
     height:125px;
 }
-/* The sidebar menu */
-.sidebar {
-    min-height: 100vh;
-    width: 250px;
-    margin-left:-250px;
-    position: fixed; /* Stay in place */
-    z-index: 10; /* Stay on top */
-    top: 0;
-    left: 0;
-    background-color: #202936;
-    overflow-x: hidden; 
-    transition: 0.5s; 
-    box-shadow: 0 0 10px #09080a;
-  }
-  .overlay .sidebar:before{
-      /* content: "";
-      min-width:100%;
-      min-height:100%;
-      position:fixed;
-      top:0;
-      left:0;
-      background-color: #cf3434a6;
-      z-index: -1000; */
-  }
-  .sidebar ul{
+
+  /* The sidebar links */
+  .sidebar-links{
     padding: 40px 20px;
   }
-  /* The sidebar links */
-  .sidebar li{
+  .sidebar-links li{
     background-color: transparent;
     border:none;
   }
-  .sidebar a {
+  .sidebar-links a {
     text-decoration: none;
     color: #fdfdfd;
     transition: 0.3s;
   }
-  .sidebar span{
+  .sidebar-links span{
       padding-left: 25px;
   }
-  .sidebar a:hover,
-  .sidebar .active{
+
+  .sidebar-links a:hover span,
+  .sidebar-links a:hover i,
+  .sidebar-links .active span,
+  .sidebar-links .active i{
     transition: 0.3s;
     color:#43d3a8;
   }
-  .sign-out-btn{
-      margin-top:40px;
-      justify-content: center;
-  }
+
   .sign-out-btn a{
-      padding-left: 0;
+    margin-top:40px;
+      justify-content: center;
       font-weight: bold;
   }
 
   /* The button used to open the sidebar */
+  .openbtn-wrap{
+      position: fixed;
+      z-index: 9;
+  }
   .openbtn {
     clip-path: polygon(0 0, 39% 16%, 39% 84%, 0% 100%);    
     position: fixed;
@@ -527,20 +539,25 @@ button:focus{
     border: none;
     height:100px;
     width:80px;
-    box-shadow: 0 0 10px #09080a;
-    z-index: 4;
     transition:0.5s;
   }
   .openbtn i{
     margin-left: -45px;
     transform: scaleY(3.5);
 }
-
   .openbtn:hover {
     background-color: #1e7272;
     transition: 0.5s;
   }
-  
+/* PROFILE */
+.item-profile i{
+    font-size: 3.5rem;
+    color:#fdfdfdce;
+    margin-bottom: 5px;
+}
+.username{
+    font-weight: bold;
+}
 /* 5.0 DATE */
 .date-month{
     font-size: 1.15rem;
@@ -562,13 +579,9 @@ button:focus{
 
 /* 5.1 TODAY'S BALANCE */
 .balance-today{
-    /* padding: 0 
-    10px; */
-    /* display: flex; */
     text-align: left;
 }
 .balance-today > div {
-    /* border:2px solid red; */
     align-items: center;
     margin: 20px 0;
 }
