@@ -525,10 +525,6 @@ button:focus{
   }
 
   /* The button used to open the sidebar */
-  .openbtn-wrap{
-      position: fixed;
-      z-index: 9;
-  }
   .openbtn {
     clip-path: polygon(0 0, 39% 16%, 39% 84%, 0% 100%);    
     position: fixed;
@@ -538,11 +534,12 @@ button:focus{
     padding: 10px 15px;
     border: none;
     height:100px;
-    width:80px;
+    width:90px;
     transition:0.5s;
+    z-index: 9;
   }
   .openbtn i{
-    margin-left: -45px;
+    margin-left: -50px;
     transform: scaleY(3.5);
 }
   .openbtn:hover {
