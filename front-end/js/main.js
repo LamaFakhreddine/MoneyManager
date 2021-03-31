@@ -139,14 +139,12 @@
                 {
                     label: "Expenses",
                     backgroundColor: "#76ebebbb",
-                    borderColor: "#b6f5f5bb",
                     borderWidth: 2,
                     data: [13, 50, 26,14,25,26,6,16, 7,3, 5, 6, 7,2,20,19]
                 },
                 {
                     label: "Profits",
                     backgroundColor: "#1f7e61d3",
-                    borderColor: "#2ca058",
                     borderWidth: 2,
                     data: [10,7,2,4,5,26,6,16,4,6,9,7,3,10,20,30]
                 }
