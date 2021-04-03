@@ -1,3 +1,23 @@
+/*  TABLE OF CONTENTS */
+/* 
+    1. MAIN ELEMENTS
+    2. CSS HELPERS
+    3. PRELOADER
+    4. SCROLLBAR
+    5. BUTTONS
+    6. LOGIN/SIGNUP FORMS
+    7. DASHBOARD
+    8. SIDEBAR 
+    9. PROFILE
+    10. DATE
+    11. TODAY'S BALANCE
+    12. SAVINGS
+    13. CHARTS
+    14. CASHFLOW DETAILS
+    15. MEDIA QUERIES
+*/
+
+
 /* 1. MAIN ELEMENTS */
 *{
     box-sizing: border-box;
@@ -23,18 +43,15 @@ input:focus, input:hover{
     border-radius: 40px;
     outline: none;
 }
-
 a{
-    color:#2ca0a0;
+    color:#33a382;
     text-decoration: none;
 }
-
 a:hover{
-    color:#51ecec;
+    color:#48ebba;
     text-decoration: none;
     transition: 0.3s ease-in-out;
 }
-
 li{
     background-color: #31415377;
     border-top: 2px solid #344d5877;
@@ -55,8 +72,104 @@ h5{
     font-weight: light;
 }
 
-/* Preloder */
 
+/* 2. CSS HELPERS */
+.title{
+    padding:10px 15px;
+}
+.box{
+    width: 400px;
+    padding: 30px;
+    margin: auto; 
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 0 10px #0d0b18;
+    background: linear-gradient(312deg,#455bbd1f 2%, rgba(255,255,255,0.2) 87%);
+    backdrop-filter: blur(10px); 
+    border-left: 2px solid #fdfdfd3a;
+    border-bottom: 2px solid #43558f1a;
+}
+.dash-box{
+    width:100%;
+    padding: 15px;
+    text-align: center;
+    border-radius: 15px;
+    background: linear-gradient(312deg,#9dafff15 2%, #9dafff15 87%);
+    backdrop-filter: blur(10px); 
+    overflow-y:auto;
+}
+.vertical-center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.full-height{
+    height: 100%;
+}
+.cash-font-lg{
+    font-weight:bold;
+    font-size: 1.5rem;
+}
+.cash-font-md{
+    font-weight:bold;
+    font-size: 1.5rem;
+}
+.cash-font-sm{
+    font-weight: bold;
+    font-size: 1rem;
+}
+.gradient-font{
+    background-color: #2ca058;
+    background-image: linear-gradient(45deg, #9afafa, #78eee4);
+    background-size: 100%;
+	background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+}
+.header{
+    padding-bottom: 7px;
+    border-bottom: 2px solid #344d5877;
+}
+.inflow-font{
+    color:#2ca058;
+}
+.outflow-font{
+    color:#c95757
+}
+.decrease-font{
+    color:#2ca058;
+}
+.increase-font{
+    color:#c95757;
+}
+.inflow-font:after, .increase-font:after{
+    font-family: FontAwesome;
+    content:"\f35b";
+    display: inline-block;
+    padding-left:5px;
+}
+.outflow-font:after, .decrease-font:after{
+    font-family: FontAwesome;
+    content:"\f358";
+    display: inline-block;
+    padding-left:5px;
+}
+.align-right{
+    margin-left:auto;
+}
+.align-left{
+    margin-right:auto;
+}
+.align-center{
+    justify-content: center;
+}
+
+
+/* 3. PRELOADER */
 #preloder {
 	position: fixed;
 	width: 100%;
@@ -66,7 +179,6 @@ h5{
 	z-index: 10;
 	background: #0a090f;
 }
-
 .loader {
 	width: 70px;
 	height: 70px;
@@ -103,7 +215,6 @@ h5{
     animation: loader 2s linear infinite;
 	-webkit-animation: loader 2s linear infinite;
 }
-
 @keyframes loader {
 	0% {
 		-webkit-transform: rotate(0deg);
@@ -177,99 +288,7 @@ h5{
 }
 
 
-/* 2. CSS HELPERS */
-.title{
-    padding:10px 15px;
-}
-.box{
-    width: 400px;
-    padding: 30px;
-    margin: auto; 
-    text-align: center;
-    border-radius: 15px;
-    box-shadow: 0 0 10px #0d0b18;
-    background: linear-gradient(312deg,#455bbd1f 2%, rgba(255,255,255,0.2) 87%);
-    backdrop-filter: blur(10px); 
-    border-left: 2px solid #fdfdfd3a;
-    border-bottom: 2px solid #43558f1a;
-}
-.vertical-center {
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-}
-.full-height{
-    height: 100%;
-}
-.cash-font-lg{
-    font-weight:bold;
-    font-size: 1.5rem;
-}
-.cash-font-md{
-    font-weight:bold;
-    font-size: 1.5rem;
-}
-.cash-font-sm{
-    font-weight: bold;
-    font-size: 1rem;
-}
-
-.gradient-font{
-    background-color: #2ca058;
-    background-image: linear-gradient(45deg, #9afafa, #78eee4);
-    background-size: 100%;
-	background-clip: text;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent; 
-    -moz-text-fill-color: transparent;
-}
-.header{
-    padding-bottom: 7px;
-    border-bottom: 2px solid #344d5877;
-}
-.bb{
-    border-top:2px solid #3135539a;
-    border-bottom:2px solid #3135539a;
-}
-.inflow-font{
-    color:#2ca058;
-}
-.outflow-font{
-    color:#c95757
-}
-.decrease-font{
-    color:#2ca058;
-}
-.increase-font{
-    color:#c95757;
-}
-.inflow-font:after, .increase-font:after{
-    font-family: FontAwesome;
-    content:"\f35b";
-    display: inline-block;
-    padding-left:5px;
-}
-.outflow-font:after, .decrease-font:after{
-    font-family: FontAwesome;
-    content:"\f358";
-    display: inline-block;
-    padding-left:5px;
-}
-.align-right{
-    margin-left:auto;
-}
-.align-left{
-    margin-right:auto;
-}
-.align-center{
-    justify-content: center;
-}
-
-
-/* SCROLLBAR */
+/* 4. SCROLLBAR */
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -292,38 +311,7 @@ h5{
 }
 
 
-/* 3. LOGIN */
-.form-name{
-    margin: 20px 20px 40px 20px;
-    text-shadow: 2px 0 7px #2c2c2cd7;
-}
-.placeholders{
-    width: 80%;
-    height: 50px;
-    padding-left: 15px;
-    border:2px solid #fdfdfd;
-}
-.placeholders:focus{
-    border:2px solid #51ecec;
-    box-shadow: 0 0 4px #51ecec;
-    transition: 0.3s ease-in;
-    
-}
-.forgot, .forgot:hover{
-    color:#fdfdfd;
-}
-
-.icon-wrapper{
-    text-align: center;
-    background-color: #2ca0a0;
-    width: 30px;
-    border-radius: 50%;
-    padding:3px;
-}
-
-
-
-/* 4. BUTTONS */
+/* 5. BUTTONS */
 button:focus{
     outline: 0;
 }
@@ -332,10 +320,10 @@ button:focus{
     letter-spacing: 1px;
     width:40%;
     height: 50px;
-    background-color: #2ca0a0;
+    background-color: #2e9274;
 }
 .btn-submit:hover, .btn-submit:focus{
-    background-color: #51ecec;
+    background-color: #43d3a8;
     box-shadow: 0 0 7px  #2c2c2cd7;
     transition: 0.2s ease-in-out;
 }
@@ -365,8 +353,61 @@ button:focus{
     color:#fdfdfd;
     transition: 0.4s ease-in-out;
 }
+/* The button used to open the sidebar */
+.openbtn {
+    clip-path: polygon(0 0, 39% 16%, 39% 84%, 0% 100%);    
+    position: fixed;
+    top:45%;
+    left:0;
+    background-color: #202936;
+    padding: 10px 15px;
+    border: none;
+    height:100px;
+    width:90px;
+    transition:0.5s;
+    z-index: 9;
+  } 
+.openbtn i{
+    margin-left: -50px;
+    transform: scaleY(3.5);
+}
+.openbtn:hover {
+    background-color: #1e7272;
+    transition: 0.5s;
+}
 
-/* 5. DASHBOARD */
+
+/* 6. LOGIN/SIGNUP FORMS */
+.form-name{
+    margin: 20px 20px 40px 20px;
+    text-shadow: 2px 0 7px #2c2c2cd7;
+    font-size: 2.75rem;
+}
+.placeholders{
+    width: 80%;
+    height: 50px;
+    padding-left: 15px;
+    border:2px solid #fdfdfd;
+}
+.placeholders:focus{
+    border:2px solid #43d3a8;
+    box-shadow: 0 0 4px #43d3a8;
+    transition: 0.3s ease-in;
+    
+}
+.forgot, .forgot:hover{
+    color:#fdfdfd;
+}
+.icon-wrapper{
+    text-align: center;
+    background-color: #2ca0a0;
+    width: 30px;
+    border-radius: 50%;
+    padding:3px;
+}
+
+
+/* 7. DASHBOARD */
 .grid-container{
     height:inherit;
     display: grid;
@@ -377,7 +418,6 @@ button:focus{
 }
 .item-profile{
     background-color: #38b6905d !important;
-
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 1;
@@ -434,7 +474,6 @@ button:focus{
     grid-row-start: 7;
     grid-row-end: 11;
 }
-
 .item-i{
     grid-column-start: 10;
     grid-column-end: 13;
@@ -442,18 +481,8 @@ button:focus{
     grid-row-end: 11;
 }
 
-.dash-box{
-    width:100%;
-    padding: 15px;
-    text-align: center;
-    border-radius: 15px;
-    background: linear-gradient(312deg,#9dafff15 2%, #9dafff15 87%);
-    backdrop-filter: blur(10px); 
-    overflow-y:auto;
 
-}
-/* SIDEBAR */
-
+/* 8. SIDEBAR */
 /* The sidebar menu */
 .sidebar {
     min-height: 100vh;
@@ -484,7 +513,6 @@ button:focus{
       transition:0.5s;
       z-index: 1;
   }
-  /* logo */
 .logo{
     background-color: #38b6905d;
     display: flex;
@@ -492,70 +520,45 @@ button:focus{
     justify-content: center;
     height:125px;
 }
-
-  /* The sidebar links */
-  .sidebar-links{
+.sidebar-links{
     padding: 40px 20px;
-  }
-  .sidebar-links li{
+}
+.sidebar-links li{
     background-color: transparent;
     border:none;
-  }
-  .sidebar-links a {
+}
+.sidebar-links a {
     text-decoration: none;
-    color: #fdfdfd;
     transition: 0.3s;
-  }
-  .sidebar-links span{
+}
+.sidebar-links span{
       padding-left: 25px;
-  }
-
-  .sidebar-links a:hover span,
-  .sidebar-links a:hover i,
-  .sidebar-links .active span,
-  .sidebar-links .active i{
+}
+.sidebar-links a:hover span,
+.sidebar-links a:hover i,
+.sidebar-links .active span,
+.sidebar-links .active i{
     transition: 0.3s;
     color:#43d3a8;
-  }
-
-  .sign-out-btn a{
-    margin-top:40px;
-      justify-content: center;
-      font-weight: bold;
-  }
-
-  /* The button used to open the sidebar */
-  .openbtn {
-    clip-path: polygon(0 0, 39% 16%, 39% 84%, 0% 100%);    
-    position: fixed;
-    top:45%;
-    left:0;
-    background-color: #202936;
-    padding: 10px 15px;
-    border: none;
-    height:100px;
-    width:90px;
-    transition:0.5s;
-    z-index: 9;
-  }
-  .openbtn i{
-    margin-left: -50px;
-    transform: scaleY(3.5);
 }
-  .openbtn:hover {
-    background-color: #1e7272;
-    transition: 0.5s;
-  }
-/* PROFILE */
+.sign-out-btn a{
+    margin-top:40px;
+    justify-content: center;
+    font-weight: bold;
+}
+  
+
+/* 9. PROFILE */
 .item-profile i{
     font-size: 3.5rem;
-    color:#fdfdfdce;
     margin-bottom: 5px;
 }
 .username{
     font-weight: bold;
 }
-/* 5.0 DATE */
+
+
+/* 10. DATE */
 .date-month{
     font-size: 1.15rem;
     margin:-15px;
@@ -574,7 +577,8 @@ button:focus{
     padding: 10px;
 }
 
-/* 5.1 TODAY'S BALANCE */
+
+/* 11. TODAY'S BALANCE */
 .balance-today{
     text-align: left;
 }
@@ -583,9 +587,8 @@ button:focus{
     margin: 20px 0;
 }
 
-/* 5.2 BANK / CREDIT CARD / CASH */
 
-/* 5.3 SAVINGS */
+/* 12. SAVINGS */
 .new-li{
     background-color: transparent;
     padding: 5px;
@@ -594,8 +597,8 @@ button:focus{
     margin-bottom: 30px;
 }
 
-/* 5.4 CHARTS */
 
+/* 13. CHARTS */
 #doughnut-chart{
     margin-top: 20px;
 }
@@ -605,7 +608,8 @@ button:focus{
     padding: 0 20px;
 }
 
-/* CASHFLOW DETAILS */
+
+/* 14. CASHFLOW DETAILS */
 .add-category{
     font-size: 0.95rem;
     margin:15px 0;
@@ -613,16 +617,18 @@ button:focus{
     display: flex;
     align-items: center;
     gap:10px;
+    color: #2e9274;
 }
-.add-category > i{
-    color:#2ca0a0;
-}
-.add-category > i:hover{
-    color:#51ecec;
+.add-category a:hover span,
+.add-category a:hover i,
+.add-category .active span,
+.add-category .active i{
+    color: #43d3a8;
     transition:0.3s ease-in-out ;
 }
 
 
+/* 15. MEDIA QUERIES */
 @media (max-width:425px){
     .box{
         margin:0;
