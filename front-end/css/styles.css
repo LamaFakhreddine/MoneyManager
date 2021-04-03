@@ -425,8 +425,7 @@ button:focus{
     background: linear-gradient(312deg,#9dafff15 2%, #9dafff15 87%);
 }
 .item-a{
-    background-image: linear-gradient(45deg, #2ca0a0, #2ca058);
-    background-color: #2e9274 !important;
+    background-color: #2e9274;
     grid-column-start: 3;
     grid-column-end: 4;
     grid-row-start: 1;
@@ -488,7 +487,7 @@ button:focus{
     min-height: 100vh;
     width: 250px;
     margin-left:-250px;
-    position: fixed; /* Stay in place */
+    position: fixed;
     top: 0;
     left: 0;
     background-color: #202936;
