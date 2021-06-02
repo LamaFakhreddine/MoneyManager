@@ -21,17 +21,14 @@
 
     <div class="container-fluid full-height">
         <div class="row grid-container">
-
-            <!-- USER PROFILE -->
-                <div class="item-profile dash-box">
-                    <a href="#">
-                        <i class="fas fa-user-circle"></i>  
-                    </a>   
-                    <div class="username">
-                        John Doe
-                    </div>
+            <div class="item-profile dash-box">
+                <a href="#">
+                    <i class="fas fa-user-circle"></i>  
+                </a>   
+                <div class="username">
+                    John Doe
                 </div>
-                <!-- TODAY'S DATE -->
+            </div>
                 <div class="item-a dash-box">
                     <div>
                         <div class="date-month"></div>
@@ -42,8 +39,6 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- DAILY BALANCE -->
                 <div class="item-b dash-box">
                     <div class="balance-today">
                         <div class="d-flex header">
@@ -60,8 +55,6 @@
                         </div>   
                     </div>
                 </div>
-
-                <!-- BANK ACCOUNT / CREDIT CARD / CASH -->
                 <div class="item-c dash-box">
                     <div>
                         <h5 class="header">Bank Account</h5>
@@ -80,8 +73,6 @@
                         <div class="cash-font-md gradient-font" data-target="541.00"></div>
                     </div>
                 </div>
-
-                <!-- SAVINGS -->
                 <div class="item-f dash-box">
                     <h5>Savings</h5>
                     <ul>
@@ -96,27 +87,27 @@
                             <div class="align-right cash-font-md decrease-font" data-target="25"></div>
                         </li>
                         <li class="new-li">
-                            <div class="icon-wrapper" style="background-color: #2ca0a0;"><i class="fas fa-tshirt"></i></div>
+                            <div class="icon-wrapper" style="background-color: #673ab7;"><i class="fas fa-tshirt"></i></div>
                             <div>Clothes</div>
                             <div class="align-right cash-font-md decrease-font" data-target="25"></div>
                         </li>
                         <li class="new-li">
-                            <div class="icon-wrapper" style="background-color: #187575;"><i class="fas fa-glass-cheers"></i></div>
+                            <div class="icon-wrapper" style="background-color: #2ca058;"><i class="fas fa-glass-cheers"></i></div>
                             <div>Leisure</div>
                             <div class="align-right cash-font-md increase-font" data-target="35"></div>
                         </li>
                         <li class="new-li">
-                            <div class="icon-wrapper" style="background-color: #024b4b;"><i class="fas fa-shopping-cart"></i></div>
+                            <div class="icon-wrapper" style="background-color: #d69d00;"><i class="fas fa-shopping-cart"></i></div>
                             <div>Groceries</div>
                             <div class="align-right cash-font-md increase-font" data-target="50"></div>
                         </li>
-                    </ul>
                 </div>
-
                 <!-- MONTHLY EXPENSES DONUT CHART -->
                 <div class="item-g dash-box">
                     <h5>Monthly Expenses (USD)</h5>
-                    <canvas id="doughnut-chart"></canvas>   
+                    <div id="chart-container">
+                        <canvas id="doughnut-chart"></canvas>   
+                    </div>
                 </div>
 
                 <!-- DAILY BALANCE HISTOGRAM -->
@@ -124,13 +115,13 @@
                     <h5>Balance of
                         <span class="date-m"></span>
                         <span class="date-year"></span></h5>
-                    <div id="container">
+                    <div id="chart-container">
                         <canvas id="bar-chart"></canvas>
                     </div>
                 </div>
-
-                <!-- DAILY BALANCE INFO CAROUSEL  -->
                 <div class="item-i dash-box">
+    
+                     <!-- DAILY BALANCE INFO CAROUSEL  -->
                     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="false">
                         <h3 class="title">Cashflow Details</h3>
                      <!-- BUTTON CONTROLS  -->
@@ -141,7 +132,7 @@
                      <!-- ADD CATEGORY BUTTON  -->
                         <a href="#" class="align-left add-category">
                             <i class="fas fa-plus"></i>   
-                            <span>Add category</span>
+                            Add category
                         </a>
                         <div class="carousel-inner">
                             <div id="daily" class="carousel-item active">
@@ -152,27 +143,27 @@
                                         <div class="align-right cash-font-md outflow-font" data-target="25"></div>
                                     </li>
                                     <li>
-                                        <div class="icon-wrapper" style="background-color: #2ca058;"><i class="fas fa-car-alt"></i></div>
+                                        <div class="icon-wrapper" style="background-color: #d69d00;"><i class="fas fa-car-alt"></i></div>
                                         <div>Transport</div>
                                         <div class="align-right cash-font-md outflow-font" data-target="25"></div>
                                     </li>
                                     <li>
-                                        <div class="icon-wrapper" style="background-color: #2ca0a0;"><i class="fas fa-tshirt"></i></div>
+                                        <div class="icon-wrapper" style="background-color: #673ab7;"><i class="fas fa-tshirt"></i></div>
                                         <div>Clothes</div>
                                         <div class="align-right cash-font-md outflow-font" data-target="25"></div>
                                     </li>
                                     <li>
-                                        <div class="icon-wrapper" style="background-color: #187575;"><i class="fas fa-glass-cheers"></i></div>
+                                        <div class="icon-wrapper" style="background-color: #2ca058;"><i class="fas fa-glass-cheers"></i></div>
                                         <div class="expense-name">Leisure</div>
                                         <div class="align-right cash-font-md outflow-font" data-target="35"></div>
                                     </li>
                                     <li>
-                                        <div class="icon-wrapper" style="background-color: #024b4b;"><i class="fas fa-shopping-cart"></i></div>
+                                        <div class="icon-wrapper" style="background-color: #eb80e2;"><i class="fas fa-shopping-cart"></i></div>
                                         <div>Groceries</div>
                                         <div class="align-right cash-font-md outflow-font" data-target="50"></div>
                                     </li>
                                     <li>
-                                        <div class="icon-wrapper" style="background-color: #6d488b;"><i class="fas fa-briefcase"></i></div>
+                                        <div class="icon-wrapper" style="background-color: #c95757;"><i class="fas fa-briefcase"></i></div>
                                         <div>Business</div>
                                         <div class="align-right cash-font-md inflow-font" data-target="34"></div>
                                     </li>
@@ -192,37 +183,37 @@
                                         <div class="align-right cash-font-md outflow-font" data-target="100"></div>
                                     </li>
                                     <li>
-                                        <div class="icon-wrapper" style="background-color: #2ca0a0;"><i class="fas fa-tshirt"></i></div>
+                                        <div class="icon-wrapper" style="background-color: #673ab7;"><i class="fas fa-tshirt"></i></div>
                                         <div class="expense-name">Clothes</div>
                                         <div class="align-right cash-font-md outflow-font" data-target="25"></div>
                                     </li>
                                     <li>
-                                        <div class="icon-wrapper" style="background-color: #6d488b;"><i class="fas fa-house-user"></i></div>
+                                        <div class="icon-wrapper" style="background-color: #e67a32;"><i class="fas fa-house-user"></i></div>
                                         <div class="expense-name">Rent</div>
                                         <div class="align-right cash-font-md outflow-font" data-target="500"></div>
                                     </li>
                                     <li>
-                                        <div class="icon-wrapper" style="background-color: #187575;"><i class="fas fa-glass-cheers"></i></div>
+                                        <div class="icon-wrapper" style="background-color: #2ca058;"><i class="fas fa-glass-cheers"></i></div>
                                         <div class="expense-name">Leisure</div>
                                         <div class="align-right cash-font-md outflow-font" data-target="205"></div>
                                     </li>
                                     <li>
-                                        <div class="icon-wrapper" style="background-color: #024b4b;"><i class="fas fa-shopping-cart"></i></div>
+                                        <div class="icon-wrapper" style="background-color: #d69d00;"><i class="fas fa-shopping-cart"></i></div>
                                         <div class="expense-name">Groceries</div>
                                         <div class="align-right cash-font-md outflow-font" data-target="400"></div>
                                     </li>
                                     <li>
-                                        <div class="icon-wrapper" style="background-color: #1f7e61;"><i class="fas fa-coins"></i></div>
+                                        <div class="icon-wrapper" style="background-color: #673ab7;"><i class="fas fa-coins"></i></div>
                                         <div class="expense-name">Taxes</div>
                                         <div class="align-right cash-font-md outflow-font" data-target="250"></div>
                                     </li>
                                     <li>
-                                        <div class="icon-wrapper" style="background-color: #0db683;"><i class="fas fa-wallet"></i></div>
+                                        <div class="icon-wrapper" style="background-color: #2ca0a0;"><i class="fas fa-wallet"></i></div>
                                         <div>Salary</div>
                                         <div class="align-right cash-font-md inflow-font" data-target="2500"></div>
                                     </li>
                                     <li>
-                                        <div class="icon-wrapper" style="background-color: #6d488b;"><i class="fas fa-briefcase"></i></div>
+                                        <div class="icon-wrapper" style="background-color: #c95757;"><i class="fas fa-briefcase"></i></div>
                                         <div>Business</div>
                                         <div class="align-right cash-font-md inflow-font" data-target="34"></div>
                                     </li>
@@ -232,8 +223,7 @@
                     </div>  
                 </div>
             </div>
-
-            <!-- SIDEBAR -->
+                           <!-- Sidebar -->
             <div id="sidebarDiv">
                 <div class="sidebar" id="mySidebar">
                     <div>
@@ -282,7 +272,7 @@
                             </a>          
                         </li>
                         <li class="sign-out-btn">                                
-                            <a href="login.html"><span>SIGN OUT</span></a>
+                            <a href="#"><span>SIGN OUT</span></a>
                         </li>
                     </ul>
                 </div>
@@ -290,9 +280,6 @@
         </div>
     </div>
 
-    
-
-    
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>

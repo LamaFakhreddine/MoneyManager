@@ -372,7 +372,7 @@ button:focus{
     transform: scaleY(3.5);
 }
 .openbtn:hover {
-    background-color: #1e7272;
+    background-color: #1e727270;
     transition: 0.5s;
 }
 
@@ -423,6 +423,7 @@ button:focus{
     grid-row-start: 1;
     grid-row-end: 3;
     background: linear-gradient(312deg,#9dafff15 2%, #9dafff15 87%);
+    overflow: hidden;
 }
 .item-a{
     background-color: #2e9274;
@@ -430,30 +431,35 @@ button:focus{
     grid-column-end: 4;
     grid-row-start: 1;
     grid-row-end: 3;
+    overflow: hidden;
 }
 .item-b{
     grid-column-start: 2;
     grid-column-end:4;
     grid-row-start: 3;
     grid-row-end: 7;
+    overflow: hidden;
 }
 .item-c{
     grid-column-start: 4;
     grid-column-end: 6;
     grid-row-start: 1;
     grid-row-end: 3;
+    overflow: hidden;
 }
 .item-d{
     grid-column-start: 6;
     grid-column-end: 8;
     grid-row-start: 1;
     grid-row-end: 3;
+    overflow: hidden;
 }
 .item-e{
     grid-column-start: 8;
     grid-column-end: 10;
     grid-row-start: 1;
     grid-row-end: 3;
+    overflow: hidden;
 }
 .item-f{
     grid-column-start: 4;
@@ -466,12 +472,14 @@ button:focus{
     grid-column-end: 10;
     grid-row-start: 3;
     grid-row-end: 7;
+    overflow: hidden;
 }
 .item-h{
     grid-column-start: 2;
     grid-column-end: 10;
     grid-row-start: 7;
     grid-row-end: 11;
+    overflow: hidden;
 }
 .item-i{
     grid-column-start: 10;
@@ -598,13 +606,19 @@ button:focus{
 
 
 /* 13. CHARTS */
+#chart-container{
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
 #doughnut-chart{
-    margin-top: 20px;
+    margin-top: -20%;
+    height:100%;
+    color: #fdfdfd98;
 }
 #bar-chart{
-    margin-top: 20px;
+    margin: 20px;
     height:100%;
-    padding: 0 20px;
 }
 
 
