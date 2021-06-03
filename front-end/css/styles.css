@@ -183,8 +183,8 @@ h5{
 	width: 70px;
 	height: 70px;
 	position: relative;
-	top: 50%;
-	left: 50%;
+	top: 47%;
+	left: 48%;
 	margin-top: -13px;
 	margin-left: -13px;
 	border-radius: 50%;
@@ -643,12 +643,27 @@ button:focus{
 
 /* 15. MEDIA QUERIES */
 @media (max-width:425px){
+    /* common responsive elements */
+    .loader{
+        top:45%;
+        left:45%;
+    }
+    /* media queries for signin.html and register.html */
     .box{
-        margin:0;
+        padding: 10%;
         width:100%;
+        height: 100%;
         border-radius: 0;
+        font-size: 0.9rem;
+    }
+    .box h1{
+        margin: 20% 0 10% 0;
     }
     .placeholders{
         width:95%;
     }
+    .btn-submit{
+        width: 60%;
+    }
+
 }
